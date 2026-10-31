@@ -50,6 +50,14 @@ Copying `skills/<skill>/` into `~/.claude/skills/` also works in Claude Code; th
 
 Cursor also reads the `.claude/skills` and `.codex/skills` paths.
 
+## Update
+
+Installs don't follow new releases on their own. Each skill's version is pinned, so an update arrives only when that skill's version is bumped.
+
+- **Claude Code:** auto-update is off by default for marketplaces outside Anthropic's. Refresh the catalog with `/plugin marketplace update dev-knacks`, then update a skill with `claude plugin update <skill>@dev-knacks` and restart the session. Or turn on auto-update under `/plugin` → Marketplaces → dev-knacks.
+- **Codex and Cursor (`npx skills`):** `npx skills update -g` updates user-wide installs, and `npx skills update -p` updates the current project's. Add skill names to update only those.
+- **Copy:** copy the folder again after `git pull`. **Symlink:** `git pull` is enough, but the agent then runs whatever is in your clone, including uncommitted edits.
+
 ## Repository layout
 
 - `.claude-plugin/marketplace.json`: the marketplace; one plugin entry per skill, with its version.
