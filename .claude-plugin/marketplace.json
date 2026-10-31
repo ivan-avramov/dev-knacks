@@ -1,0 +1,42 @@
+{
+  "name": "dev-knacks",
+  "description": "Agent skills for reviewing material, running multi-model development work and writing vault notes, each installable on its own.",
+  "owner": {
+    "name": "Ivan Avramov"
+  },
+  "plugins": [
+    {
+      "name": "review-assistant",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/review-assistant"],
+      "version": "0.1.0",
+      "description": "Interactive, reviewer-driven review of design docs, products, vendors, patents, repos and benchmarks."
+    },
+    {
+      "name": "four-eyes",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/four-eyes"],
+      "version": "0.7.0",
+      "description": "Non-trivial development work split across several models: design, implementation, tests and a review panel.",
+      "dependencies": ["review-panel"]
+    },
+    {
+      "name": "review-panel",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/review-panel"],
+      "version": "0.5.0",
+      "description": "Cold review, verification or research by a panel of other models, judged by the driving session."
+    },
+    {
+      "name": "vnote",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/vnote"],
+      "version": "0.1.0",
+      "description": "Frontmatter schema, relation vocabulary and provenance rules for Basic Memory vault notes."
+    }
+  ]
+}

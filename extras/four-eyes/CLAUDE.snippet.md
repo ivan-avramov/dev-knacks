@@ -1,0 +1,1 @@
+- four-eyes: for non-trivial development work, and always for anything touching security, authentication, permissions, secrets or a data boundary, use the `four-eyes` skill (strict for security and architecture, light otherwise); not when you were dispatched as a helper in another run. If the skill is not installed, say so and ask before proceeding.

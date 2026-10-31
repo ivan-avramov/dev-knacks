@@ -1,0 +1,23 @@
+# Operator documentation, never a panel. Copy it to ~/.config/review-panel/panel.toml by hand and list the members this machine can run.
+# runtime: claude | codex | cursor-agent | subagent
+# model: an alias or family (resolved to the newest version per runtimes.md), or a full id to pin; omitted for codex to run its default.
+# effort: the runtime's effort level; required for a cursor-agent family and for codex.
+# timeout: optional, in seconds; default 900.
+# Order matters: the first member is the one used when a single member is wanted, and callers such as four-eyes read strength from the order and the names.
+
+[[member]]
+name = "codex"
+runtime = "codex"
+effort = "high"
+timeout = 1200
+
+[[member]]
+name = "opus"
+runtime = "claude"
+model = "opus"
+
+[[member]]
+name = "sol"
+runtime = "cursor-agent"
+model = "sol"
+effort = "high"
